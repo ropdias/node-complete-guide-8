@@ -8,7 +8,7 @@ Section 12 covered:
 - [x] Relations in NoSQL
 - [x] Setting Up MongoDB
 - [x] Installing the MongoDB Driver
-- [ ] Creating the Database Connection
+- [x] Creating the Database Connection
 - [ ] Finishing the Database Connection
 - [ ] Using the Database Connection
 - [ ] Creating Products
