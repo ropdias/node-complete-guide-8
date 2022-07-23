@@ -10,7 +10,7 @@ Section 12 covered:
 - [x] Installing the MongoDB Driver
 - [x] Creating the Database Connection
 - [x] Finishing the Database Connection
-- [ ] Using the Database Connection
+- [x] Using the Database Connection
 - [ ] Creating Products
 - [ ] Understanding the MongoDB Compass
 - [ ] Fetching All Products
