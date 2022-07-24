@@ -11,8 +11,8 @@ Section 12 covered:
 - [x] Creating the Database Connection
 - [x] Finishing the Database Connection
 - [x] Using the Database Connection
-- [ ] Creating Products
-- [ ] Understanding the MongoDB Compass
+- [x] Creating Products
+- [x] Understanding the MongoDB Compass
 - [ ] Fetching All Products
 - [ ] Fetching a Single Product
 - [ ] Making the "Edit" & "Delete" Buttons Work Again

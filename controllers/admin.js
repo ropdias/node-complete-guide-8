@@ -13,16 +13,10 @@ exports.postAddProduct = (req, res, next) => {
   const imageUrl = req.body.imageUrl;
   const price = req.body.price;
   const description = req.body.description;
+  const product = new Product(title, price, description, imageUrl);
 
-  // We can use the "magic association" method createProduct() to create
-  // a new product associated to the user
-  req.user
-    .createProduct({
-      title: title,
-      price: price,
-      imageUrl: imageUrl,
-      description: description,
-    })
+  product
+    .save()
     .then((result) => {
       console.log("Created Product");
       res.redirect("/admin/products");
