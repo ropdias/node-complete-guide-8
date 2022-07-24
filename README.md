@@ -19,7 +19,7 @@ Section 12 covered:
 - [x] Working on the Product Model to Edit our Product
 - [x] Finishing the "Update Product" Code
 - [x] One Note About Updating Products
-- [ ] Deleting Products
+- [X] Deleting Products
 - [ ] Fixing the "Add Product" Functionality
 - [ ] Creating New Users
 - [ ] Storing the User in our Database
