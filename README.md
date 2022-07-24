@@ -18,7 +18,7 @@ Section 12 covered:
 - [x] Making the "Edit" & "Delete" Buttons Work Again
 - [x] Working on the Product Model to Edit our Product
 - [x] Finishing the "Update Product" Code
-- [ ] One Note About Updating Products
+- [x] One Note About Updating Products
 - [ ] Deleting Products
 - [ ] Fixing the "Add Product" Functionality
 - [ ] Creating New Users
