@@ -17,15 +17,29 @@ class User {
   }
 
   addToCart(product) {
-    // const cartProduct = this.cart.items.findIndex((cp) => {
-    //   return cp._id === product._id;
-    // });
+    const cartProductIndex = this.cart.items.findIndex((cp) => {
+      // Take care when comparing the id of documents, you should compare the converted string of it
+      return cp.productId.toString() === product._id.toString();
+    });
+    let newQuantity = 1;
+    const updatedCartItems = [...this.cart.items];
+
+    if (cartProductIndex >= 0) {
+      // It means the product already exists:
+      newQuantity = this.cart.items[cartProductIndex].quantity + 1;
+      updatedCartItems[cartProductIndex].quantity = newQuantity;
+    } else {
+      updatedCartItems.push({
+        productId: new ObjectId(product._id),
+        quantity: newQuantity,
+      });
+    }
     const updatedCart = {
-      items: [{ productId: new ObjectId(product._id), quantity: 1 }],
+      items: updatedCartItems,
     };
     const db = getDb();
     return db.collection("users").updateOne(
-      { _id: this._id },
+      { _id: new ObjectId(this._id) },
       { $set: { cart: updatedCart } } // This will overwrite the cart
     );
   }
