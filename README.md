@@ -21,7 +21,7 @@ Section 12 covered:
 - [x] One Note About Updating Products
 - [x] Deleting Products
 - [x] Fixing the "Add Product" Functionality
-- [ ] Creating New Users
+- [x] Creating New Users
 - [ ] Storing the User in our Database
 - [ ] Working on Cart Items & Orders
 - [ ] Adding the "Add to Cart" Functionality
