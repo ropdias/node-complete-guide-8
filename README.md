@@ -15,7 +15,7 @@ Section 12 covered:
 - [x] Understanding the MongoDB Compass
 - [x] Fetching All Products
 - [x] Fetching a Single Product
-- [ ] Making the "Edit" & "Delete" Buttons Work Again
+- [x] Making the "Edit" & "Delete" Buttons Work Again
 - [ ] Working on the Product Model to Edit our Product
 - [ ] Finishing the "Update Product" Code
 - [ ] One Note About Updating Products
