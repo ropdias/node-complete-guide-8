@@ -16,7 +16,7 @@ Section 12 covered:
 - [x] Fetching All Products
 - [x] Fetching a Single Product
 - [x] Making the "Edit" & "Delete" Buttons Work Again
-- [ ] Working on the Product Model to Edit our Product
+- [x] Working on the Product Model to Edit our Product
 - [ ] Finishing the "Update Product" Code
 - [ ] One Note About Updating Products
 - [ ] Deleting Products
