@@ -29,7 +29,7 @@ Section 12 covered:
 - [x] Displaying the Cart Items
 - [x] Deleting Cart Items
 - [x] Adding an Order
-- [ ] Adding Relational Order Data
+- [x] Adding Relational Order Data
 - [ ] Getting Orders
 - [ ] Removing Deleted Items From the Cart
 
