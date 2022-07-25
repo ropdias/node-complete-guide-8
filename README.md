@@ -28,7 +28,7 @@ Section 12 covered:
 - [x] Storing Multiple Products in the Cart
 - [x] Displaying the Cart Items
 - [x] Deleting Cart Items
-- [ ] Adding an Order
+- [x] Adding an Order
 - [ ] Adding Relational Order Data
 - [ ] Getting Orders
 - [ ] Removing Deleted Items From the Cart

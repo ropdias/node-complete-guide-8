@@ -72,31 +72,8 @@ exports.postCartDeleteProduct = (req, res, next) => {
 };
 
 exports.postOrder = (req, res, next) => {
-  let fetchedCart;
   req.user
-    .getCart()
-    .then((cart) => {
-      fetchedCart = cart;
-      return cart.getProducts();
-    })
-    .then((products) => {
-      return req.user
-        .createOrder()
-        .then((order) => {
-          // Since we have different quantitys for every product we can't add using the "through" attribute
-          // We need to use a map function to set what would be the quantity we want based on the cartItem quantity
-          return order.addProducts(
-            products.map((product) => {
-              product.orderItem = { quantity: product.cartItem.quantity };
-              return product;
-            })
-          );
-        })
-        .catch((err) => console.log(err));
-    })
-    .then((result) => {
-      return fetchedCart.setProducts(null); // We dropped all the items in the cart by setting them to null
-    })
+    .addOrder()
     .then((result) => {
       res.redirect("/orders");
     })
