@@ -49,10 +49,9 @@ exports.getIndex = (req, res, next) => {
 exports.getCart = (req, res, next) => {
   req.user
     .getCart()
-    .then((cart) => {
-      return cart.getProducts(); // This was added by sequelize as a magic method
-    })
     .then((products) => {
+      console.log("aqui");
+      console.log(products);
       res.render("shop/cart", {
         path: "/cart",
         pageTitle: "Your Cart",
@@ -69,41 +68,8 @@ exports.postCart = (req, res, next) => {
     .then((product) => {
       return req.user.addToCart(product);
     })
-    .then((result) => console.log(result))
+    .then(() => res.redirect("/cart"))
     .catch((err) => console.log(err));
-  // let fetchedCart; // Storing the cart in a variable to make it available in another .then() method
-  // let newQuantity = 1;
-  // req.user
-  //   .getCart()
-  //   .then((cart) => {
-  //     fetchedCart = cart;
-  //     return cart.getProducts({ where: { id: prodId } });
-  //   })
-  //   .then((products) => {
-  //     let product;
-  //     if (products.length > 0) {
-  //       product = products[0];
-  //     }
-  //     if (product) {
-  //       // cartItem is the extra field that gets added by sequelize to gives
-  //       // us access to this in-between table:
-  //       const oldQuantity = product.cartItem.quantity;
-  //       newQuantity = oldQuantity + 1;
-  //       return product;
-  //     }
-  //     return Product.findByPk(prodId);
-  //   })
-  //   .then((product) => {
-  //     return fetchedCart.addProduct(product, {
-  //       through: { quantity: newQuantity }, // We are saying sequelize that we have an extra field to set
-  //     }); // Another magic method by sequelize for the many-to-many relationship
-  //   })
-  //   .then(() => {
-  //     res.redirect("/cart");
-  //   })
-  //   .catch((err) => {
-  //     console.log(err);
-  //   });
 };
 
 exports.postCartDeleteProduct = (req, res, next) => {
