@@ -90,8 +90,7 @@ class User {
         };
         return db.collection("orders").insertOne(order);
       })
-      .then((result) => {
-        this.cart = { items: [] };
+      .then(() => {
         return db.collection("users").updateOne(
           { _id: new ObjectId(this._id) },
           { $set: { cart: { items: [] } } } // This will overwrite the cart
@@ -110,13 +109,7 @@ class User {
 
   static findById(userId) {
     const db = getDb();
-    return db
-      .collection("users")
-      .findOne({ _id: new ObjectId(userId) })
-      .then((user) => {
-        return user;
-      })
-      .catch((err) => console.log(err));
+    return db.collection("users").findOne({ _id: new ObjectId(userId) });
   }
 }
 
